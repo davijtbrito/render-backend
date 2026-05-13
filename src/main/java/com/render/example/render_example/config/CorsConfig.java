@@ -11,7 +11,7 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins("https://render-frontend-v6af.onrender.com")
-                .allowedOrigins("http://localhost:4200")
+                //.allowedOrigins("http://localhost:4200")  -- remove this line for tests in localhost
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
                 .allowedHeaders("*")
                 .allowCredentials(true)
